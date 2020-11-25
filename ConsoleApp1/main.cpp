@@ -1,8 +1,8 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 int main()
 {
-    printf("Hello\nWorld!");
-
     return 0;
 }
