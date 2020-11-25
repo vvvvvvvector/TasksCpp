@@ -4,7 +4,7 @@
 
 double randomDouble(double min, double max)
 {
-    return min + ((double)rand()/RAND_MAX) * (max - min);
+    return min + ((double)rand() / RAND_MAX) * (max - min);
 }
 
 double *func(const double *arr, int len, double min, double max, int *n_out)
@@ -57,5 +57,9 @@ int main()
         std::cout << newArr[i] << " ";
     }
 
+    delete[] arr;
+    arr = nullptr;
+    delete[] newArr;
+    newArr = nullptr;
     return 0;
 }
