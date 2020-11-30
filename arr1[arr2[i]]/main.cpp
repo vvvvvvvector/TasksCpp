@@ -42,6 +42,10 @@ int main()
 
     func(arr1, arr2, n1, n2);
 
+    delete[] arr1;
+    arr1 = nullptr;
+    delete[] arr2;
+    arr2 = nullptr;
     return 0;
 }
 
