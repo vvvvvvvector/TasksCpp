@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 
-void func(char **arr, int n);
+void func(char **, int);
 
 int main()
 {
