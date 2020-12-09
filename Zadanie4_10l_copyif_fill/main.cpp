@@ -6,10 +6,10 @@ bool func(char c) { return c >= 'a' && c <= 'z'; }
 
 int main()
 {
-    char *str = new char[100];
+    char str[100];
     std::cin >> str;
 
-    char *str1 = new char[strlen(str) + 1]{'\0'};
+    char str1[101] = {'\0'};
 
     char *begin = std::copy_if(str, str + strlen(str), str1, func);
     std::fill(begin, str1 + strlen(str), '-');
