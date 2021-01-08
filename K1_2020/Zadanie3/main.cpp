@@ -22,7 +22,7 @@ int main()
     std::cout << func(0, 0) << std::endl;
     std::cout << func(3, 3) << std::endl;
     std::cout << func(4, 4) << std::endl;
-    std::cout << func(2, 10);
+    std::cout << func(2, 10) << std::endl;
     
     return 0;
 }

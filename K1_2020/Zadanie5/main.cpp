@@ -14,9 +14,9 @@ char digit2letter(char c)
 
 int main()
 {
-    // const int size = 11;
-    // char str[size];
-    // std::cin >> str;
+    //const int size = 11;
+    //char str[size];
+    //std::cin >> str;
 
     char str[] = "ab62CD13aZ";
 
@@ -25,7 +25,7 @@ int main()
         str[i] = digit2letter(str[i]);
     }
 
-    std::cout << str;
+    std::cout << str << std::endl;
 
     return 0;
 }

@@ -18,7 +18,7 @@ bool palindrom_1(char *str)
     bool is_palindrom = true;
     for (int i = 0; str[i] && is_palindrom; i++)
     {
-        if(str[i] != str[strlen(str) - 1 - i])
+        if (str[i] != str[strlen(str) - 1 - i])
         {
             is_palindrom = false;
         }
@@ -34,7 +34,7 @@ int main()
 
     std::cout << palindrom_1(str) << std::endl;
     std::cout << palindrom_1(str1) << std::endl;
-    std::cout << palindrom_1(str2);
+    std::cout << palindrom_1(str2) << std::endl;
 
     return 0;
 }
