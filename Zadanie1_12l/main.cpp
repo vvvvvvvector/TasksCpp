@@ -8,15 +8,15 @@ private:
     float x, y;
 
 public:
-    void setX(float v) { x = v; }
-    void setY(float v) { y = v; }
+    void setX(float x) { this->x = x; }
+    void setY(float y) { this->y = y; }
 
     float getX() const { return x; }
     float getY() const { return y; }
 
     void print()
     {
-        std::cout << x << " " << y << std::endl;
+        std::cout << "x = " << x << "  y = " << y << std::endl;
     }
 };
 
@@ -71,6 +71,8 @@ int pointsInCircle(Point *points, int n, double a, double b, double r, Point **r
 
 int main()
 {
+    srand(time(NULL));
+    
     const int n = 10;
     Point arr[n];
     Point *result[n];
@@ -80,6 +82,13 @@ int main()
         arr[i].setX(rand() / (double)RAND_MAX);
         arr[i].setY(rand() / (double)RAND_MAX);
     }
+
+    for (int i = 0; i < n; i++)
+    {
+        arr[i].print();
+    }
+    
+    std::cout << std::endl;
 
     int len = pointsInCircle(arr, n, 0, 0, 1, result, n);
 
