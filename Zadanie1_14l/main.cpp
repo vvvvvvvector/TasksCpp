@@ -3,29 +3,42 @@
 
 int main()
 {
-    FILE *pf = fopen("text.txt", "a+");
-
-    const int size = 7;
-    int arr[size];
+    FILE *pf = fopen("text.txt", "r");
+    
+    const int n = 8;
+    int arr[n];
     int i = 0;
 
-    int num;
-    if (pf)
+    if(pf)
     {
-        while (fscanf(pf, "%d", &num) > 0)
+        int num;
+        while(fscanf(pf, "%d", &num) > 0)
         {
             arr[i] = num;
             i++;
         }
+        fclose(pf);
     }
 
-    for (int i = 0; i < size; i++)
+    int min = arr[0];
+    for (int i = 0; i < n; i++)
     {
-        std::cout << arr[i] << " ";
+        if(min > arr[i])
+        {
+            min = arr[i];
+        }
     }
 
-    std::cout << std::endl;
-    
+    int max = arr[0];
+    for (int i = 0; i < n; i++)
+    {
+        if(max < arr[i])
+        {
+            max = arr[i];
+        }
+    }
 
+    std::cout << "max = " << max << " min = " << min << std::endl;
+    
     return 0;
 }
