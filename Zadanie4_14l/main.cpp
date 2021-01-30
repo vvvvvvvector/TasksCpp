@@ -3,31 +3,28 @@
 
 int main()
 {
-    FILE *pf = fopen("text.txt", "r");
+    FILE *pf = fopen("numbers.txt", "r");
 
-    const int size = 100;
-    int arr[size];
+    const int n = 8;
+    int numbers[n];
     int i = 0;
-    int num;
 
-    if (pf)
+    if(pf)
     {
-        while (fscanf(pf, "%d", &num) > 0)
+        int num;
+        while(fscanf(pf, "%d", &num) > 0)
         {
-            arr[i] = num + 1;
+            numbers[i] = num;
             i++;
         }
-        fclose(pf);
     }
 
-    pf = fopen("text.txt", "w");
-    
-    for (int j = 0; j < i; j++)
+    pf = fopen("numbers.txt", "w");
+    for (int i = 0; i < n; i++)
     {
-        fprintf(pf, "%d ", arr[j]);
+        fprintf(pf, "%d ", ++numbers[i]);
     }
     fclose(pf);
-    
-    
+
     return 0;
 }
